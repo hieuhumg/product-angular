@@ -1,0 +1,26 @@
+<h2>Input your new product here: </h2>
+<br />
+<br />
+<table class="table table-border table-hovered table-striped">
+  <tr>
+    <td class="col-xs-1">Name</td>
+    <td>
+      <input type="text" [(ngModel)]="product.name" class="col-xs-4" required />
+    </td>
+  </tr>
+  <tr>
+    <td class="col-xs-1">Price</td>
+    <td>
+      <input type="number" [(ngModel)]="product.price" class="col-xs-4" />
+    </td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>
+      Active <input type="radio" name="productStatus" [value]="true" [(ngModel)]="product.status" />
+      Deactive <input type="radio" name="productStatus" [value]="false" [(ngModel)]="product.status" />
+    </td>
+  </tr>
+</table>
+<input type="button" value="Insert it!!!" (click)="addProduct()" class="btn btn-primary" />
+<input type="button" value="Reset all!!!" class="btn btn-danger" />
